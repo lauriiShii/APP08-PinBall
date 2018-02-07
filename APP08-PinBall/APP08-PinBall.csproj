@@ -240,10 +240,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Scripts\BallDoorScript.cs" />
-    <Compile Include="Assets\_Scripts\BallScript.cs" />
-    <Compile Include="Assets\_Scripts\FlipperScript.cs" />
-    <Compile Include="Assets\_Scripts\PlungerScript.cs" />
+    <Compile Include="Assets\_Scripts\GameManager.cs" />
+    <Compile Include="Assets\_Scripts\InterfaceGame.cs" />
+    <Compile Include="Assets\_Scripts\TableroScripts\FlipperScript.cs" />
+    <Compile Include="Assets\_Scripts\TableroScripts\IslaScript.cs" />
+    <Compile Include="Assets\_Scripts\TableroScripts\NaveScript.cs" />
+    <Compile Include="Assets\_Scripts\TableroScripts\NieveScript.cs" />
+    <Compile Include="Assets\_Scripts\TableroScripts\NuevaPelotaScript.cs" />
+    <Compile Include="Assets\_Scripts\TableroScripts\PlungerScript.cs" />
+    <Compile Include="Assets\_Scripts\TableroScripts\PuertaPelotaScript.cs" />
     <Compile Include="Assets\Complete-Game\Scripts\Done_BGScroller.cs" />
     <Compile Include="Assets\Complete-Game\Scripts\Done_DestroyByBoundary.cs" />
     <Compile Include="Assets\Complete-Game\Scripts\Done_DestroyByContact.cs" />

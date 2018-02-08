@@ -31,7 +31,7 @@ public class FlipperScript : MonoBehaviour {
         JointSpring spring = new JointSpring();
         spring.spring = hitStrength;
         spring.damper = flipperDamper;
-
+        sonido();
         if (Input.GetAxis(inputName) == 1)
         {
             spring.targetPosition = pressedPosition;
@@ -39,11 +39,33 @@ public class FlipperScript : MonoBehaviour {
         else
         {
             spring.targetPosition = restPosition;
+            GameManager.fliperDerecho = true;
+            GameManager.fliperIzquierdo = true;
         }
 
         hingeJoint.spring = spring;
         hingeJoint.useLimits = true;
             
+    }
+
+    private void sonido()
+    {
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            if (GameManager.fliperDerecho)
+            {
+                GameManager.fliperDerecho = false;
+                GetComponent<AudioSource>().Play();
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            if (GameManager.fliperIzquierdo)
+            {
+                GameManager.fliperIzquierdo = false;
+                GetComponent<AudioSource>().Play();
+            }
+        }
     }
 
 }

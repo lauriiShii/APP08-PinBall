@@ -47,6 +47,7 @@ public class PlungerScript : MonoBehaviour {
             {
                 foreach (Rigidbody r in ballList)
                 {
+                    GetComponent<AudioSource>().Play();
                     r.AddForce(power * Vector3.forward);
                 }
             }

@@ -11,7 +11,7 @@ public class PuertaPelotaScript : MonoBehaviour {
         if (other.gameObject.CompareTag("Ball"))
         {
             // Se hace animacion para que la puerta impida subir a la pelota
-            door.GetComponent<Animation>().Play();
+            door.GetComponent<Animation>().Play("OpenDoorBall");
         }
 
     }

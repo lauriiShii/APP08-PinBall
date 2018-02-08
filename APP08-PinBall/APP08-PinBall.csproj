@@ -241,24 +241,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Scripts\GameManager.cs" />
-    <Compile Include="Assets\_Scripts\InterfaceGame.cs" />
+    <Compile Include="Assets\_Scripts\Interface\InterfaceAwake.cs" />
+    <Compile Include="Assets\_Scripts\Interface\InterfaceFinal.cs" />
+    <Compile Include="Assets\_Scripts\Interface\InterfaceGame.cs" />
+    <Compile Include="Assets\_Scripts\Rotator.cs" />
+    <Compile Include="Assets\_Scripts\TableroScripts\AsteroideScript.cs" />
     <Compile Include="Assets\_Scripts\TableroScripts\FlipperScript.cs" />
     <Compile Include="Assets\_Scripts\TableroScripts\IslaScript.cs" />
+    <Compile Include="Assets\_Scripts\TableroScripts\MeteoritoScript.cs" />
     <Compile Include="Assets\_Scripts\TableroScripts\NaveScript.cs" />
     <Compile Include="Assets\_Scripts\TableroScripts\NieveScript.cs" />
     <Compile Include="Assets\_Scripts\TableroScripts\NuevaPelotaScript.cs" />
     <Compile Include="Assets\_Scripts\TableroScripts\PlungerScript.cs" />
+    <Compile Include="Assets\_Scripts\TableroScripts\PuertaFlipper.cs" />
     <Compile Include="Assets\_Scripts\TableroScripts\PuertaPelotaScript.cs" />
-    <Compile Include="Assets\Complete-Game\Scripts\Done_BGScroller.cs" />
-    <Compile Include="Assets\Complete-Game\Scripts\Done_DestroyByBoundary.cs" />
-    <Compile Include="Assets\Complete-Game\Scripts\Done_DestroyByContact.cs" />
-    <Compile Include="Assets\Complete-Game\Scripts\Done_DestroyByTime.cs" />
-    <Compile Include="Assets\Complete-Game\Scripts\Done_EvasiveManeuver.cs" />
-    <Compile Include="Assets\Complete-Game\Scripts\Done_GameController.cs" />
-    <Compile Include="Assets\Complete-Game\Scripts\Done_Mover.cs" />
-    <Compile Include="Assets\Complete-Game\Scripts\Done_PlayerController.cs" />
-    <Compile Include="Assets\Complete-Game\Scripts\Done_RandomRotator.cs" />
-    <Compile Include="Assets\Complete-Game\Scripts\Done_WeaponController.cs" />
     <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\randomParticleRotation.cs" />
     <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\ReverseNormals.cs" />
     <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\rotation.cs" />

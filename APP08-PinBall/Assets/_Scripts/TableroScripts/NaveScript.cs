@@ -11,19 +11,17 @@ public class NaveScript : MonoBehaviour {
     {
         if (collision.gameObject.tag.Equals("Ball"))
         {
+            GameManager.puntuacion += 2;
+            GetComponent<AudioSource>().Play();
+            GetComponent<Animation>().Play();
+            GameManager.golpesNave++;
+
             if (GameManager.golpesNave == numGolpesNaveMax)
             {
                 GameManager.puntuacion += 50;
                 Instantiate(explosion, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 GameManager.nave = false;
-            }
-            else
-            {
-                GameManager.puntuacion += 2;
-                GetComponent<AudioSource>().Play();
-                GetComponent<Animation>().Play();
-                GameManager.golpesNave++;
             }
         }
     }

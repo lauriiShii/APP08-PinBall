@@ -6,6 +6,9 @@ public class GameManager {
 
     public static bool fliperIzquierdo;
     public static bool fliperDerecho;
+    public static bool fliperIzquierdoSonido;
+    public static bool fliperDerechoSonido;
+    public static bool space;
     public static bool nave;
 
     public static int puntuacion;

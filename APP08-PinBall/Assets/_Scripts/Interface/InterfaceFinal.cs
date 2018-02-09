@@ -27,9 +27,18 @@ public class InterfaceFinal : MonoBehaviour
 
     public void OnClick()
     {
+        GameManager.fliperDerecho = false;
+        GameManager.fliperIzquierdo = false;
+        GameManager.fliperDerechoSonido = false;
+        GameManager.fliperIzquierdoSonido = false;
+        GameManager.space = false;
         GameManager.puntuacion = 0;
         GameManager.meteoritosDestruidos = 0;
-        GameManager.vidas = 0;
+        GameManager.meteoritosTotales = 26;
+        GameManager.vidas = 3;
+        GameManager.golpesNave = 0;
+        GameManager.nave = true;
+        GameManager.numPasoBola = 1;
         SceneManager.LoadScene("PinBallCustom");
     }
 

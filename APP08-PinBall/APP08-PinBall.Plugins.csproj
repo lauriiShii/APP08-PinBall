@@ -232,11 +232,27 @@
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>C:/Users/eclip/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="LeapCSharp.NET3.5">
+      <HintPath>Assets/LeapMotion/Core/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+    </Reference>
+    <Reference Include="InteractionEngineUtility">
+      <HintPath>Assets/LeapMotion/Modules/InteractionEngine/Plugins/InteractionEngineUtility.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Standard Assets\Utility\ParticleSystemDestroyer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\LeapMotion\Core\Dependencies.txt" />
+    <None Include="Assets\LeapMotion\Core\README_BEFORE_UPDATING.txt" />
+    <None Include="Assets\LeapMotion\Core\Resources\LeapCG.cginc" />
+    <None Include="Assets\LeapMotion\Core\Resources\PassthroughBackground.shader" />
+    <None Include="Assets\LeapMotion\Core\Resources\PassthroughForeground.shader" />
+    <None Include="Assets\LeapMotion\Core\Resources\RuntimeGizmos.shader" />
+    <None Include="Assets\LeapMotion\Core\Resources\ThresholdOverlay.shader" />
+    <None Include="Assets\LeapMotion\Core\Resources\VertexOffsetShader.shader" />
+    <None Include="Assets\LeapMotion\Core\Version.txt" />
+    <None Include="Assets\LeapMotion\Core\readme.txt" />
     <None Include="Assets\Particle Ribbon by Moonflower Carnivore\Shaders\Particle Alpha Blend HDR.shader" />
     <None Include="Assets\Particle Ribbon by Moonflower Carnivore\readme_Simple_Particle_Ribbon.txt" />
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />

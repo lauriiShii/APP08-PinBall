@@ -9,6 +9,9 @@ public class InterfaceAwake : MonoBehaviour {
     {
         GameManager.fliperDerecho = false;
         GameManager.fliperIzquierdo = false;
+        GameManager.fliperDerechoSonido = false;
+        GameManager.fliperIzquierdoSonido = false;
+        GameManager.space = false;
         GameManager.puntuacion = 0;
         GameManager.meteoritosDestruidos = 0;
         GameManager.meteoritosTotales = 26;

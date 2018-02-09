@@ -19,7 +19,9 @@ public class InterfaceAwake : MonoBehaviour {
         GameManager.golpesNave = 0;
         GameManager.nave = true;
         GameManager.numPasoBola = 1;
-    }
+        GameManager.fliperDerechoSuperiorSonido = false;
+        GameManager.fliperDerechoSuperior = false;
+}
 
     public void Click()
     {

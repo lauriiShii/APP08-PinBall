@@ -34,6 +34,7 @@ public class PlungerLeapMotion : MonoBehaviour {
         else
         {
             ballReady = false;
+            GameManager.space = false;
         }
     }
 

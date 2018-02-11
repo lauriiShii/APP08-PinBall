@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿
+///////////////////////////////
+// Practica: Pin-Ball
+// Alumno/a: Laura Calvente Domínguez
+// Curso: 2017/2018
+// Fichero: HoverGlow.cs
+///////////////////////////////
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Leap.Unity;
@@ -8,11 +16,14 @@ using Leap.Unity.Interaction;
 [RequireComponent(typeof(InteractionBehaviour))]
 public class HoverGlow : MonoBehaviour
 {
+    #region Variables
     [Header("Activacion del Glow")]
     [Tooltip("Si esta activado, cambiara de color el objeto en funcion de la distancia de la mano")]
+    // Indica si la mano esta por encima del botón
     public bool useHover = true;
 
     [Tooltip("Si esta activado, el objeto utilizara su primaryHoverControl cuando se acerque la mano")]
+    // Se activa cuando se acerca la mano
     public bool usePrimaryHover = true;
 
     [Header("Colores")]
@@ -23,6 +34,7 @@ public class HoverGlow : MonoBehaviour
     public Color hoverColor = Color.Lerp(Color.black, Color.white, 0.7f);
     // - en este caso concreto un gris muy claro
     public Color primaryHoverColor = Color.Lerp(Color.black, Color.white, 0.8f);
+
     // Suavidad del cambio de color
     public float smoothColor = 5f;
 
@@ -30,8 +42,13 @@ public class HoverGlow : MonoBehaviour
     private Material material;
     // Referencia al script InteractionBehaviour
     private InteractionBehaviour intObj;
+    #endregion
 
-    // Use this for initialization
+    #region Métodos
+    /// <summary>
+    /// Detecta el objeto más cercano a la mano. Obtenemos el material de ese
+    /// gameObject.
+    /// </summary>
     void Start()
     {
         // Recuperamos la referencial al componente InteractionBehaviour0
@@ -54,7 +71,9 @@ public class HoverGlow : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Según la distancia de la mano al gameObject se pone un color u otro.
+    /// </summary>
     void Update()
     {
         // Verificamos si existe la referencia al material
@@ -85,8 +104,6 @@ public class HoverGlow : MonoBehaviour
             material.color = Color.Lerp(material.color, targetColor, smoothColor * Time.deltaTime);
 
         }
-
-
-
+        #endregion
     }
 }

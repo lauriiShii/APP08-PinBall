@@ -262,7 +262,6 @@
     <Compile Include="Assets\_Scripts\InterfaceLeapMotion\InterfaceInicioLeapMotion.cs" />
     <Compile Include="Assets\_Scripts\InterfaceLeapMotion\NuevaPelotaScriptLeapMotion.cs" />
     <Compile Include="Assets\_Scripts\Rotator.cs" />
-    <Compile Include="Assets\_Scripts\TableroScripts\AsteroideScript.cs" />
     <Compile Include="Assets\_Scripts\TableroScripts\FlipperScript.cs" />
     <Compile Include="Assets\_Scripts\TableroScripts\IslaScript.cs" />
     <Compile Include="Assets\_Scripts\TableroScripts\MeteoritoScript.cs" />

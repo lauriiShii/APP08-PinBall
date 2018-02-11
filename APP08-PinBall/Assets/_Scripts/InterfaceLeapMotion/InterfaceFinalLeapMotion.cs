@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿
+///////////////////////////////
+// Practica: Pin-Ball
+// Alumno/a: Laura Calvente Domínguez
+// Curso: 2017/2018
+// Fichero: InterfaceFinalLeapMotion.cs
+///////////////////////////////
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,10 +15,20 @@ using UnityEngine.SceneManagement;
 public class InterfaceFinalLeapMotion : MonoBehaviour
 {
 
+    #region Variables
+    [Header("Textos a mostrar")]
+    // Puntuación del usuario
     public Text puntuacion;
+    // Meteoritos destruidos
     public Text meteoritos;
+    // Dice si gana o pierde
     public Text winOrGameOver;
+    #endregion
 
+    #region Métodos
+    /// <summary>
+    /// Actualiza los textos de la interfaz.
+    /// </summary>
     void Start()
     {
         puntuacion.text = string.Format("Puntuacion: {0}", GameManager.puntuacion.ToString());
@@ -25,6 +43,9 @@ public class InterfaceFinalLeapMotion : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Actualiza todos los valores del juego.
+    /// </summary>
     public void OnClick()
     {
         GameManager.fliperDerecho = false;
@@ -41,7 +62,9 @@ public class InterfaceFinalLeapMotion : MonoBehaviour
         GameManager.numPasoBola = 1;
         GameManager.fliperDerechoSuperiorSonido = false;
         GameManager.fliperDerechoSuperior = false;
+
         SceneManager.LoadScene("PinBallCustomLeapMotion");
     }
+    #endregion
 
 }

@@ -1,31 +1,51 @@
-﻿using System;
+﻿
+///////////////////////////////
+// Practica: Pin-Ball
+// Alumno/a: Laura Calvente Domínguez
+// Curso: 2017/2018
+// Fichero: FlipperScript.cs
+///////////////////////////////
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FlipperScript : MonoBehaviour {
 
-    // Anguli de posicion de descanso
+    #region Variables
+    [Header("Diferentes posiciones del flipper")]
+    // Angulo de posicion de descanso
     public float restPosition = 0.0f;
     // Angulo de posicion presionado
     public float pressedPosition = 45.0f;
+    [Header("Fuerzas para el flipper")]
+    [Tooltip("Fuerza con la que sube el flipper")]
     // Fuerza del golpe de impacto
     public float hitStrength = 10000.0f;
     // Fuerza del flipper
+    [Tooltip("Resistencia del flipper")]
     public float flipperDamper = 150.0f;
     // Nombre de la entrada
+    [Header("Tecla pulsada")]
     public String inputName;
-
+    // Punto sobre el que gira el flipper
     HingeJoint hingeJoint;
+    #endregion
 
-    // Use this for initialization
+    #region Métodos
+    /// <summary>
+    /// Instanciamos el "hingeJoint" y el "spring".
+    /// </summary>
     void Start()
     {
         hingeJoint = GetComponent<HingeJoint>();
         hingeJoint.useSpring = true;
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Comprueba si el flipper esta en accion o no, si no lo esta lo hace.
+    /// </summary>
     void Update()
     {
         JointSpring spring = new JointSpring();
@@ -48,6 +68,9 @@ public class FlipperScript : MonoBehaviour {
             
     }
 
+    /// <summary>
+    /// Reproduce el sinido controlando que tecla se ha pulsado.
+    /// </summary>
     private void sonido()
     {
         if (Input.GetKeyUp(KeyCode.D))
@@ -67,5 +90,6 @@ public class FlipperScript : MonoBehaviour {
             }
         }
     }
+    #endregion
 
 }

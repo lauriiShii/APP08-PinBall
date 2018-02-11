@@ -1,10 +1,22 @@
-﻿using System.Collections;
+﻿
+///////////////////////////////
+// Practica: Pin-Ball
+// Alumno/a: Laura Calvente Domínguez
+// Curso: 2017/2018
+// Fichero: InterfaceAwakeLeapMotion.cs
+///////////////////////////////
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class InterfaceAwakeLeapMotion : MonoBehaviour {
 
+    #region Métodos
+    /// <summary>
+    /// Inicializamos todas las variables del GameManager.
+    /// </summary>
     void Start()
     {
         GameManager.fliperDerecho = false;
@@ -22,9 +34,12 @@ public class InterfaceAwakeLeapMotion : MonoBehaviour {
         GameManager.fliperDerechoSuperiorSonido = false;
         GameManager.fliperDerechoSuperior = false;
 }
-
+    /// <summary>
+    /// La interfaz es la encargada de gestionar el cambio de scena.
+    /// </summary>
     public void Click()
     {
         SceneManager.LoadScene("PinBallCustomLeapMotion");
     }
+    #endregion
 }
